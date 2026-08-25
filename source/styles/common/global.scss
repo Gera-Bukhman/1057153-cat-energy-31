@@ -1,1 +1,14 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+ul {
+  list-style-type: none;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Oswald", system-ui, sans-serif;
+}

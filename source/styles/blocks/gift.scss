@@ -1,54 +1,83 @@
 .gift {
-  background-color: $color-green;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 60px 30px;
-  min-height: 290px;
+  justify-content: flex-start;
+  height: 290px;
+  padding: 60px 30px 0;
+  background-color: $color-green;
   overflow: hidden;
+  margin-top: 35px;
 
-  &__picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  @media (min-width: 768px) and (max-width: 1439px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 70px;
+    padding: 0 77px;
   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  @media (min-width: 1440px) {
+    margin-top: 0;
   }
+}
 
-  &__icon {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 40px;
-    width: 78px;
-    height: 80px;
-    background-color: $color-white;
-    mask-image: url("../../icons/stack.svg#icon_gift");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
+.gift__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gift__picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color-green, 0.85);
+}
+
+.gift__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gift__icon {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 78px;
+  height: 80px;
+  margin: 0;
+  background-color: $color-white;
+  mask-image: url("../../icons/stack.svg#icon_gift");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.gift__paragraph {
+  position: relative;
+  z-index: 2;
+  margin: 48px 0 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-white;
+  text-align: center;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    margin: 0 46px 0 0;
+    text-align: left;
   }
+}
 
-  &__paragraph {
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: $color-white;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
+.gift__text-line {
+  display: block;
+  white-space: nowrap;
 }

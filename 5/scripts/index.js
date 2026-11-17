@@ -1,1 +1,1 @@
-var o=document.querySelector(".main-nav__toggle");console.log(o);var e=document.querySelector(".main-nav");console.log(e);o.addEventListener("click",()=>{e.classList.toggle("main-nav--closed"),e.classList.toggle("main-nav--opened"),console.log("\u0448\u043E\u043A \u043E\u043D\u043E \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442")});
+var n=document.querySelector(".main-nav__toggle"),e=document.querySelector(".main-nav");n.addEventListener("click",()=>{e.classList.toggle("main-nav--closed"),e.classList.toggle("main-nav--opened")});
